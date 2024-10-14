@@ -1,8 +1,6 @@
-bankVaultsImage: ghcr.io/banzaicloud/bank-vaults:1.15.3
-
 existingTlsSecretName: ""
 
-image: vault:1.10.3
+image: vault:1.17.6
 
 ingress:
   enabled: true
