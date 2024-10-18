@@ -5,8 +5,9 @@ metadata:
 spec:
   size: {{ .Values.size }}
   image: {{ .Values.image }}
-  bankVaultsImage: {{ .Values.bankVaultsImage }}
-
+{{ with .Values.bankVaultsImage }}
+  bankVaultsImage: {{ . }}
+{{ end }}
   # Common annotations for all created resources
   annotations:
     common/annotation: "true"
