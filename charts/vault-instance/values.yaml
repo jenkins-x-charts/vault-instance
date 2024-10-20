@@ -1,6 +1,6 @@
 existingTlsSecretName: ""
 
-image: vault:1.17.6
+image: hashicorp/vault:1.17.6
 
 ingress:
   enabled: true
