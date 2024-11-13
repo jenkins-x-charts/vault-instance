@@ -1,6 +1,7 @@
 existingTlsSecretName: ""
 
 image: hashicorp/vault:1.17.6
+bankVaultsImage: ""
 
 ingress:
   enabled: true
@@ -33,3 +34,6 @@ pvc:
 
 # example "default"
 customAuthRole: ""
+
+nodeAffinity: {}
+tolerations: {}
