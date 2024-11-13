@@ -29,6 +29,9 @@ spec:
     example.com/log-format: "string"
 
   # Support for nodeAffinity Rules
+{{ with .Values.nodeAffinity }}
+  nodeAffinity: {{ toYaml . | nindent 4 }}
+{{ end }}
   # nodeAffinity:
   #   requiredDuringSchedulingIgnoredDuringExecution:
   #     nodeSelectorTerms:
@@ -44,6 +47,9 @@ spec:
 
   # Support for node tolerations that work together with node taints to control
   # the pods that can like on a node
+{{ with .Values.tolerations }}
+  tolerations: {{ toYaml . | nindent 4 }}
+{{ end }}
   # tolerations:
   # - effect: NoSchedule
   #   key: node-role.kubernetes.io/your_role
