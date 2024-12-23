@@ -177,3 +177,4 @@ spec:
 
   # Marks presence of Istio, which influences things like port namings
   istioEnabled: {{ .Values.istio.enabled }}
+  veleroEnabled: {{ .Values.veleroEnabled }}

@@ -22,6 +22,8 @@ ingress:
 istio:
   enabled: false
 
+veleroEnabled: false
+
 size: 1
 
 auth:
