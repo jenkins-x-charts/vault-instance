@@ -37,5 +37,7 @@ pvc:
 # example "default"
 customAuthRole: ""
 
+annotations: {}
+
 nodeAffinity: {}
 tolerations: {}
