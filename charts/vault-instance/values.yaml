@@ -41,3 +41,4 @@ annotations: {}
 
 nodeAffinity: {}
 tolerations: {}
+vaultContainerSpec: {}
