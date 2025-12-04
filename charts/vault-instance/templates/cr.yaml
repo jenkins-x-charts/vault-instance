@@ -37,6 +37,22 @@ spec:
   #   operator: Equal
   #   value: "true"
 
+  # VaultContainerSpec is a Kubernetes Container specification snippet that will be merged into the
+  # operator generated Vault Container specification.
+{{ with .Values.vaultContainerSpec }}
+  vaultContainerSpec: {{ toYaml . | nindent 4 }}
+{{ end }}
+  # vaultContainerSpec:
+  #   name: ""
+  #   resources:
+  #     limits:
+  #       cpu: "1"
+  #       memory: 1Gi
+  #     requests:
+  #       cpu: 250m
+  #       memory: 512Mi
+
+
   # Specify the ServiceAccount where the Vault Pod and the Bank-Vaults configurer/unsealer is running
   serviceAccount: vault
 
